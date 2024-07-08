@@ -5,6 +5,11 @@ class TodoListSerializer(serializers.ModelSerializer):
     class Meta:
         model = Todo 
         exclude = ['updated_at','completed']
+        depth = 1
+
+class TodoCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Todo 
 
 
 class TodoDetailSerializer(serializers.ModelSerializer):
